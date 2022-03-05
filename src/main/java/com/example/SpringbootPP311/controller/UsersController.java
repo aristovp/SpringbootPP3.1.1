@@ -1,7 +1,7 @@
 package com.example.SpringbootPP311.controller;
 
 import com.example.SpringbootPP311.model.User;
-import com.example.SpringbootPP311.service.UserService;
+import com.example.SpringbootPP311.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/")
 public class UsersController {
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @Autowired
-    public UsersController(UserService userService) {
+    public UsersController(UserServiceImpl userService) {
         this.userService = userService;
     }
 
